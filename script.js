@@ -121,3 +121,16 @@ function draw() {
   requestAnimationFrame(draw);
 }
 draw();
+
+// ===== slideshows (cross-fade between screenshots) =====
+document.querySelectorAll('.slideshow').forEach((box) => {
+  const imgs = box.querySelectorAll('img');
+  if (imgs.length < 2) return;
+  const interval = +box.dataset.interval || 3000;
+  let i = 0;
+  setInterval(() => {
+    imgs[i].classList.remove('active');
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add('active');
+  }, interval);
+});

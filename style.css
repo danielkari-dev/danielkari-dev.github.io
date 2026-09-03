@@ -175,6 +175,9 @@ h1, h2, h3, h4, .nav-logo { font-family: 'Sora', sans-serif; }
   margin-bottom: 22px; box-shadow: 0 8px 24px rgba(124,108,255,.35);
 }
 .app-icon-soon { background: linear-gradient(135deg, #3a3f52, #262a38); box-shadow: none; color: var(--muted); }
+/* real app icon (image) — fills the rounded square, no gradient behind */
+.app-icon-img { background: none; box-shadow: 0 8px 24px rgba(0,0,0,.35); padding: 0; overflow: hidden; }
+.app-icon-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; }
 .app-card h3 { font-size: 1.5rem; margin-bottom: 4px; }
 .app-tagline { color: var(--accent2); font-weight: 600; font-size: .9rem; margin-bottom: 14px; }
 .app-desc { color: var(--muted); font-size: 1rem; margin-bottom: 20px; }
@@ -189,6 +192,10 @@ h1, h2, h3, h4, .nav-logo { font-family: 'Sora', sans-serif; }
   background: rgba(255,138,61,.1); padding: 5px 12px; border-radius: 20px;
 }
 .app-card-soon { border-style: dashed; }
+.app-note {
+  margin-top: 14px; font-size: .78rem; line-height: 1.5; color: var(--muted);
+  border-top: 1px solid var(--border); padding-top: 12px; font-style: italic;
+}
 
 /* ROADMAP */
 .roadmap { margin-top: 64px; }
@@ -209,6 +216,45 @@ h1, h2, h3, h4, .nav-logo { font-family: 'Sora', sans-serif; }
 .roadmap-stage { font-size: .74rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
 .stage-progress { color: var(--accent2); background: rgba(53,196,255,.1); }
 .stage-idea { color: var(--orange); background: rgba(255,138,61,.1); }
+
+/* row of phone screenshots */
+.shots-row {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 28px; margin: 10px 0 54px;
+}
+.shots-row .phone-shot { margin: 0; }
+.shots-row .phone-frame { width: 238px; }
+
+/* landscape phone (for the game — same device, rotated 90°) */
+.phone-frame.landscape {
+  width: 475px;              /* screen long-edge across */
+  padding: 12px;
+}
+.phone-frame.landscape img { border-radius: 20px; }
+
+/* slideshow: stack images, cross-fade between them */
+.slideshow { position: relative; width: 100%; }
+.slideshow img {
+  width: 100%; display: block; border-radius: 24px;
+}
+.phone-frame.landscape .slideshow img { border-radius: 20px; }
+.slideshow img:not(:first-child) {
+  position: absolute; inset: 0;
+}
+.slideshow img { opacity: 0; transition: opacity .8s ease; }
+.slideshow img.active { opacity: 1; }
+
+/* GAMES section layout: phone left, card right */
+.games-layout {
+  display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;
+}
+.games-layout .phone-shot { margin: 0; flex-shrink: 0; }
+.games-layout .game-card { flex: 1; min-width: 280px; max-width: 480px; }
+/* notch on the side when rotated */
+.phone-frame.landscape .phone-notch {
+  top: 50%; left: auto; right: 12px; transform: translateY(-50%);
+  width: 18px; height: 90px; border-radius: 12px 0 0 12px;
+}
 
 /* phone frame with real screenshot */
 .phone-shot { margin: 10px 0 46px; display: flex; flex-direction: column; align-items: center; }
