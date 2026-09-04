@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel W — AppDev | Mobile App Developer</title>
+  <meta name="description" content="Daniel W - AppDev. Self-taught mobile app developer building clean, private, useful Android apps with Flutter. Creator of QuickGallery, GovMate, BLIP, Blab, TideMate and Fluonix, plus the game Bob & Bee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- WebGL interactive particle background (falls back to CSS if unsupported) -->
+  <canvas id="webgl-bg"></canvas>
+  <div class="bg-grain"></div>
+
+  <!-- custom cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <img src="logo-dw.jpg" alt="DW" class="nav-logo-img" />
+      <span>Daniel W · AppDev</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#apps">Apps</a>
+      <a href="#games">Games</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-logo reveal">
+        <img src="logo-dw.jpg" alt="Daniel W logo" />
+      </div>
+      <p class="hero-eyebrow reveal">Mobile App Developer · UK</p>
+      <h1 class="hero-title reveal">
+        I build <span class="grad">clean, private,</span><br />
+        useful <span class="grad">Android apps</span>.
+      </h1>
+      <p class="hero-sub reveal">
+        Self-taught developer with 14 years of operations leadership.
+        I turn real-world problems into simple, fast mobile apps — built with Flutter.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#apps" class="btn btn-primary">View my apps</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-head reveal">
+      <span class="tag">01 — About</span>
+      <h2>From the warehouse floor to the app store.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm Daniel — an operations leader by day and a self-taught app developer by night.
+          After 14 years leading large teams and building systems that make operations run
+          smoother, I started building mobile apps to solve everyday problems.
+        </p>
+        <p>
+          My focus is simple: apps that are <strong>fast</strong>, <strong>private</strong>,
+          and actually <strong>useful</strong>. No clutter, no tracking, no nonsense — just
+          clean tools people enjoy using.
+        </p>
+        <p>
+          I build with Flutter, so one codebase runs everywhere. I've now built six
+          apps — QuickGallery, GovMate, BLIP, Blab, TideMate and Fluonix — plus a game in
+          development, with more on the way.
+        </p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat glass"><span class="stat-num" data-target="14">0</span><span class="stat-label">Years leading teams</span></div>
+        <div class="stat glass"><span class="stat-num" data-target="6">0</span><span class="stat-label">Apps built</span></div>
+        <div class="stat glass"><span class="stat-num" data-target="1">0</span><span class="stat-label">Game in the works</span></div>
+        <div class="stat glass"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Private &amp; on-device</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps" class="section">
+    <div class="section-head reveal">
+      <span class="tag">02 — Apps</span>
+      <h2>Things I've built.</h2>
+    </div>
+
+    <!-- 3D phone carousel: phones sit around a circle and rotate like a turntable.
+         Drag / swipe to spin, or use the arrows. Front phone faces you, side ones
+         turn away, back ones show their reverse. -->
+    <div class="carousel-scene reveal" id="carouselScene">
+      <div class="carousel" id="carousel">
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <img src="qg-screen.jpg" alt="QuickGallery" />
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2600">
+              <img src="img/govmate-1.jpg" alt="GovMate" class="active" />
+              <img src="img/govmate-2.jpg" alt="GovMate" />
+              <img src="img/govmate-3.jpg" alt="GovMate" />
+              <img src="img/govmate-4.jpg" alt="GovMate" />
+              <img src="img/govmate-5.jpg" alt="GovMate" />
+              <img src="img/govmate-6.jpg" alt="GovMate" />
+              <img src="img/govmate-7.jpg" alt="GovMate" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2800">
+              <img src="img/blip-1.jpg" alt="BLIP" class="active" />
+              <img src="img/blip-2.jpg" alt="BLIP" />
+              <img src="img/blip-3.jpg" alt="BLIP" />
+              <img src="img/blip-4.jpg" alt="BLIP" />
+              <img src="img/blip-5.jpg" alt="BLIP" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2800">
+              <img src="img/blab-1.jpg" alt="Blab" class="active" />
+              <img src="img/blab-2.jpg" alt="Blab" />
+              <img src="img/blab-4.jpg" alt="Blab" />
+              <img src="img/blab-5.jpg" alt="Blab" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2800">
+              <img src="img/tidemate-1.jpg" alt="TideMate" class="active" />
+              <img src="img/tidemate-2.jpg" alt="TideMate" />
+              <img src="img/tidemate-3.jpg" alt="TideMate" />
+              <img src="img/tidemate-4.jpg" alt="TideMate" />
+              <img src="img/tidemate-5.jpg" alt="TideMate" />
+              <img src="img/tidemate-6.jpg" alt="TideMate" />
+              <img src="img/tidemate-7.jpg" alt="TideMate" />
+              <img src="img/tidemate-8.jpg" alt="TideMate" />
+              <img src="img/tidemate-9.jpg" alt="TideMate" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2800">
+              <img src="img/fluonix-1.jpg" alt="Fluonix" class="active" />
+              <img src="img/fluonix-2.jpg" alt="Fluonix" />
+              <img src="img/fluonix-3.jpg" alt="Fluonix" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carPrev" aria-label="Previous">&#8249;</button>
+        <span class="carousel-caption" id="carCaption">QuickGallery</span>
+        <button class="carousel-btn" id="carNext" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+
+    <div class="apps-grid">
+      <!-- QuickGallery -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-quickgallery.png" alt="QuickGallery icon" /></div>
+        <h3>QuickGallery</h3>
+        <p class="app-tagline">Photo Vault &amp; Gallery</p>
+        <p class="app-desc">
+          A fast, private photo gallery with a secure PIN vault, custom albums, a full
+          collage editor, and smart tools — all stored locally on your device. No cloud,
+          no accounts, no tracking.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Private vault</li><li>Collage editor</li><li>Offline</li></ul>
+        <div class="app-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="qg-play">On Google Play</button>
+          <span class="app-status">Closed testing</span>
+        </div>
+      </article>
+
+      <!-- GovMate -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-govmate.png" alt="GovMate icon" /></div>
+        <h3>GovMate</h3>
+        <p class="app-tagline">UK Forms Helper</p>
+        <p class="app-desc">
+          Understand official UK letters and forms, and prepare your own information in
+          clear English — even if English isn't your first language. Write in any language;
+          GovMate replies in yours. Scan a letter and the text is read on your device only.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Any language</li><li>On-device scan</li><li>Private</li></ul>
+        <div class="app-actions"><span class="app-status">Built · in testing</span></div>
+      </article>
+
+      <!-- BLIP -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-blip.png" alt="BLIP icon" /></div>
+        <h3>BLIP</h3>
+        <p class="app-tagline">Internet Speed Test</p>
+        <p class="app-desc">
+          A light, private speed test. Measures download, upload, ping and jitter with a
+          clean animated gauge — no clutter, no accounts, results stay on your device.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Download &amp; upload</li><li>Ping &amp; jitter</li><li>Private</li></ul>
+        <div class="app-actions"><span class="app-status">Built · in testing</span></div>
+      </article>
+
+      <!-- Blab -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-blab.png" alt="Blab icon" /></div>
+        <h3>Blab</h3>
+        <p class="app-tagline">Read Any Text Aloud</p>
+        <p class="app-desc">
+          Turns any text into speech. Select text in any app and tap "Read with Blab",
+          paste it in, or scan it from a photo — then follow along as each word is
+          highlighted, with adjustable speed and voices in many languages.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Text-to-speech</li><li>Scan text (OCR)</li><li>Any language</li></ul>
+        <div class="app-actions"><span class="app-status">Built · in testing</span></div>
+      </article>
+
+      <!-- TideMate -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-tidemate.png" alt="TideMate icon" /></div>
+        <h3>TideMate</h3>
+        <p class="app-tagline">Tide, Beach &amp; Fossil Companion</p>
+        <p class="app-desc">
+          A beautiful beach-walking companion for the UK coast. Live tide times and curves,
+          a "safe beach window" that warns you when to head back before the water cuts you
+          off, an hourly weather forecast, and an AI fossil identifier for your beach finds.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Live tides</li><li>Safe-window alerts</li><li>AI fossil ID</li></ul>
+        <div class="app-actions"><span class="app-status">Personal project</span></div>
+        <p class="app-note">A personal project built for my own use — not published on any app store. Shown here to demonstrate what's possible.</p>
+      </article>
+
+      <!-- Fluonix -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-fluonix.png" alt="Fluonix icon" /></div>
+        <h3>Fluonix</h3>
+        <p class="app-tagline">All-format Video &amp; Audio Player</p>
+        <p class="app-desc">
+          A modern media player that plays almost any video and audio format — movies,
+          music and audiobooks. Touch gestures for brightness, volume and seeking, folders,
+          favourites and sorting, plus a battery-saving dim mode for audio. Its standout
+          feature: two ways to control playback hands-free — wave your hand in front of the
+          camera to skip, change volume or pause (like gesture control in a car), or use
+          your voice: say a wake word and a command such as "pause" or "volume up".
+          Perfect when your hands are busy. All offline, no accounts, no tracking.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>All formats</li><li>Camera gestures</li><li>Voice control</li><li>Audiobooks</li><li>Offline</li></ul>
+        <div class="app-actions"><span class="app-status">Built · in testing</span></div>
+      </article>
+    </div>
+
+    <!-- ROADMAP -->
+    <div class="roadmap">
+      <h3 class="roadmap-title reveal">What's next</h3>
+      <div class="roadmap-grid">
+        <div class="roadmap-item glass reveal">
+          <span class="roadmap-dot dot-progress"></span>
+          <div><h4>QuickGallery on Google Play</h4>
+            <p>In closed testing on Google Play, heading for public release.</p>
+            <span class="roadmap-stage stage-progress">Closed testing</span></div>
+        </div>
+        <div class="roadmap-item glass reveal">
+          <span class="roadmap-dot dot-progress"></span>
+          <div><h4>Five more apps built</h4>
+            <p>GovMate, BLIP, Blab, TideMate and Fluonix (now with hands-free camera-gesture and voice control) are built and in testing, being polished for release.</p>
+            <span class="roadmap-stage stage-progress">Built · in testing</span></div>
+        </div>
+        <div class="roadmap-item glass reveal">
+          <span class="roadmap-dot dot-progress"></span>
+          <div><h4>Bob &amp; Bee game</h4>
+            <p>My first game — a build-and-explore adventure with several hand-drawn worlds — in active development.</p>
+            <span class="roadmap-stage stage-progress">In development</span></div>
+        </div>
+        <div class="roadmap-item glass reveal">
+          <span class="roadmap-dot dot-idea"></span>
+          <div><h4>More ideas</h4>
+            <p>Always exploring new tools worth building. Watch this space.</p>
+            <span class="roadmap-stage stage-idea">Exploring</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games" class="section">
+    <div class="section-head reveal">
+      <span class="tag">03 — Games</span>
+      <h2>Games I'm building.</h2>
+    </div>
+    <div class="games-layout">
+      <div class="phone-shot reveal">
+        <div class="phone-frame landscape"><div class="phone-notch"></div>
+          <div class="slideshow" data-interval="3000">
+            <img src="img/game-1.jpg" alt="Bob &amp; Bee game" class="active" />
+            <img src="img/game-2.jpg" alt="Bob &amp; Bee game" />
+          </div>
+        </div>
+        <p class="phone-caption">Bob &amp; Bee — running on Android</p>
+      </div>
+      <article class="app-card game-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-bobandbee.png" alt="Bob &amp; Bee icon" /></div>
+        <h3>Bob &amp; Bee</h3>
+        <p class="app-tagline">Build &amp; Beyond · Game</p>
+        <p class="app-desc">
+          A colourful mobile game with a hand-drawn world to explore and build in —
+          my first venture into game development, built with Flutter. Packed with
+          custom artwork and playful worlds. Currently in the works.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Game</li><li>Hand-drawn art</li><li>Multiple worlds</li></ul>
+        <div class="app-actions"><span class="app-status">In development</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-head reveal">
+      <span class="tag">04 — Skills</span>
+      <h2>How I build.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill glass reveal"><h4>Flutter &amp; Dart</h4><p>Cross-platform apps from a single codebase.</p></div>
+      <div class="skill glass reveal"><h4>Clean UI/UX</h4><p>Simple, fast interfaces people enjoy.</p></div>
+      <div class="skill glass reveal"><h4>Privacy-first</h4><p>On-device storage, no tracking, no clutter.</p></div>
+      <div class="skill glass reveal"><h4>Firebase</h4><p>Auth, cloud data and notifications when needed.</p></div>
+      <div class="skill glass reveal"><h4>Problem-solving</h4><p>14 years turning messy problems into systems.</p></div>
+      <div class="skill glass reveal"><h4>Google Play</h4><p>End-to-end publishing and release management.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="section-head reveal">
+      <span class="tag">05 — Contact</span>
+      <h2>Let's talk.</h2>
+    </div>
+    <p class="contact-lead reveal">
+      Got an app idea, a project, or just want to say hi? I'd love to hear from you.
+    </p>
+    <div class="contact-actions reveal">
+      <a href="mailto:danielw.appdev@gmail.com" class="btn btn-primary">danielw.appdev@gmail.com</a>
+      <a href="https://www.instagram.com/danielw.appdev/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+      <a href="https://www.linkedin.com/in/daniel-wolniewicz-9249b7257/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Daniel W — AppDev. Built by hand with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <!-- QuickGallery testing modal -->
+  <div class="modal-backdrop" id="qg-modal">
+    <div class="modal glass">
+      <button class="modal-close" id="qg-modal-close" aria-label="Close">&times;</button>
+      <h3>QuickGallery is almost here</h3>
+      <p>
+        The app is currently in <strong>closed testing</strong> on Google Play and isn't
+        publicly available just yet. It'll be live for everyone soon — check back or get in
+        touch to hear when it launches.
+      </p>
+      <a href="#contact" class="btn btn-primary btn-sm" id="qg-modal-contact">Get notified</a>
+    </div>
+  </div>
+
+  <!-- Three.js for the WebGL particle background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
