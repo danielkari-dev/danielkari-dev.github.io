@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel W — AppDev | Mobile App Developer</title>
-  <meta name="description" content="Daniel W - AppDev. Self-taught mobile app developer building clean, private, useful Android apps with Flutter. Creator of QuickGallery, GovMate, BLIP, Blab, TideMate, Fluonix and MyGardenMate, plus the game Bob & Bee." />
+  <meta name="description" content="Daniel W - AppDev. Self-taught mobile app developer building clean, private, useful Android apps with Flutter. Creator of QuickGallery, GovMate, BLIP, Blab, TideMate, Fluonix, MyGardenMate and RoutineLoop, plus the game Bob & Bee." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -78,14 +78,14 @@
           clean tools people enjoy using.
         </p>
         <p>
-          I build with Flutter, so one codebase runs everywhere. I've now built seven
-          apps — QuickGallery, GovMate, BLIP, Blab, TideMate, Fluonix and MyGardenMate —
-          plus a game in development, with more on the way.
+          I build with Flutter, so one codebase runs everywhere. I've now built eight
+          apps — QuickGallery, GovMate, BLIP, Blab, TideMate, Fluonix, MyGardenMate and
+          RoutineLoop — plus a game in development, with more on the way.
         </p>
       </div>
       <div class="about-stats reveal">
         <div class="stat glass"><span class="stat-num" data-target="14">0</span><span class="stat-label">Years leading teams</span></div>
-        <div class="stat glass"><span class="stat-num" data-target="7">0</span><span class="stat-label">Apps built</span></div>
+        <div class="stat glass"><span class="stat-num" data-target="8">0</span><span class="stat-label">Apps built</span></div>
         <div class="stat glass"><span class="stat-num" data-target="1">0</span><span class="stat-label">Game in the works</span></div>
         <div class="stat glass"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Private &amp; on-device</span></div>
       </div>
@@ -183,6 +183,15 @@
             </div>
           </div>
         </div>
+        <div class="carousel-cell">
+          <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="slideshow" data-interval="2600">
+              <img src="img/routineloop-1.jpg" alt="RoutineLoop" class="active" />
+              <img src="img/routineloop-2.jpg" alt="RoutineLoop" />
+              <img src="img/routineloop-3.jpg" alt="RoutineLoop" />
+            </div>
+          </div>
+        </div>
       </div>
       <div class="carousel-controls">
         <button class="carousel-btn" id="carPrev" aria-label="Previous">&#8249;</button>
@@ -198,11 +207,14 @@
         <h3>QuickGallery</h3>
         <p class="app-tagline">Photo Vault &amp; Gallery</p>
         <p class="app-desc">
-          A fast, private photo gallery with a secure PIN vault, custom albums, a full
-          collage editor, and smart tools — all stored locally on your device. No cloud,
+          A fast, private photo gallery with a genuinely secure hidden vault. Photos in the
+          vault are encrypted on your device (AES-256) and locked behind a PIN — the PIN itself
+          is salted and hashed, never stored as plain text. Extras include a calculator
+          disguise, optional intruder photo capture on a wrong PIN, a 30-day trash, custom
+          albums, a full collage editor and smart tools. All stored locally — no cloud,
           no accounts, no tracking.
         </p>
-        <ul class="app-tags"><li>Flutter</li><li>Private vault</li><li>Collage editor</li><li>Offline</li></ul>
+        <ul class="app-tags"><li>Flutter</li><li>Encrypted vault</li><li>Secure PIN</li><li>Calculator disguise</li><li>Collage editor</li><li>Offline</li></ul>
         <div class="app-actions">
           <button type="button" class="btn btn-primary btn-sm" id="qg-play">On Google Play</button>
           <span class="app-status">Closed testing</span>
@@ -275,13 +287,15 @@
         <p class="app-desc">
           A modern media player that plays almost any video and audio format — movies,
           music and audiobooks. Touch gestures for brightness, volume and seeking, folders,
-          favourites and sorting, plus a battery-saving dim mode for audio. Its standout
+          favourites and sorting. Choose how audio behaves when the screen is off: a
+          battery-saving dim mode, keep playing in the background, or full lock-screen
+          controls (play, pause and skip from your lock screen and notification). Its standout
           feature: two ways to control playback hands-free — wave your hand in front of the
           camera to skip, change volume or pause (like gesture control in a car), or use
           your voice: say a wake word and a command such as "pause" or "volume up".
           Perfect when your hands are busy. All offline, no accounts, no tracking.
         </p>
-        <ul class="app-tags"><li>Flutter</li><li>All formats</li><li>Camera gestures</li><li>Voice control</li><li>Audiobooks</li><li>Offline</li></ul>
+        <ul class="app-tags"><li>Flutter</li><li>All formats</li><li>Camera gestures</li><li>Voice control</li><li>Background audio</li><li>Lock-screen controls</li><li>Audiobooks</li><li>Offline</li></ul>
         <div class="app-actions"><span class="app-status">Built · in testing</span></div>
       </article>
 
@@ -303,6 +317,23 @@
         <ul class="app-tags"><li>Flutter</li><li>AI plant ID</li><li>Watering &amp; feeding reminders</li><li>Disease diagnosis</li><li>Growth diary</li><li>Seasonal calendar</li><li>Weather-smart</li><li>Any language</li></ul>
         <div class="app-actions"><span class="app-status">Built · in testing</span></div>
       </article>
+
+      <!-- RoutineLoop -->
+      <article class="app-card tilt reveal">
+        <div class="app-icon app-icon-img"><img src="img/icon-routineloop.png" alt="RoutineLoop icon" /></div>
+        <h3>RoutineLoop</h3>
+        <p class="app-tagline">Repeating Routines &amp; Shift Tasks</p>
+        <p class="app-desc">
+          A simple tracker for the routines that repeat every shift, day, week or month.
+          Assign each routine to a role (not a person), give it time slots, and tick it off
+          as Done, N/A or Blocked with a reason. Today / This Week / This Month views with a
+          live progress bar, reminders at each slot time, ready-made templates to start fast,
+          and a timestamped history so you have your own record. Everything stays on your
+          device — no cloud, no accounts, no tracking.
+        </p>
+        <ul class="app-tags"><li>Flutter</li><li>Routines &amp; checklists</li><li>Slot reminders</li><li>Templates</li><li>Progress tracking</li><li>Offline</li></ul>
+        <div class="app-actions"><span class="app-status">Built · in testing</span></div>
+      </article>
     </div>
 
     <!-- ROADMAP -->
@@ -317,8 +348,8 @@
         </div>
         <div class="roadmap-item glass reveal">
           <span class="roadmap-dot dot-progress"></span>
-          <div><h4>Six more apps built</h4>
-            <p>GovMate, BLIP, Blab, TideMate, Fluonix (hands-free camera-gesture and voice control) and MyGardenMate (AI plant care) are built and in testing, being polished for release.</p>
+          <div><h4>Seven more apps built</h4>
+            <p>GovMate, BLIP, Blab, TideMate, Fluonix (hands-free camera-gesture and voice control), MyGardenMate (AI plant care) and RoutineLoop (repeating routines &amp; shift tasks) are built and in testing, being polished for release.</p>
             <span class="roadmap-stage stage-progress">Built · in testing</span></div>
         </div>
         <div class="roadmap-item glass reveal">
