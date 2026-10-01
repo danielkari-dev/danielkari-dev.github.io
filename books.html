@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books by Daniel Wolniewicz — BOB &amp; BEE children's books</title>
+  <meta name="description" content="Children's books by Daniel Wolniewicz. The BOB &amp; BEE Activity &amp; Colouring Books (21 themed worlds) and the illustrated storybook BOB &amp; BEE and the Great Treasure Map. Available on Amazon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="webgl-bg"></canvas>
+  <div class="bg-grain"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="index.html#hero" class="nav-logo">
+      <img src="logo-dw.jpg" alt="DW" class="nav-logo-img" />
+      <span>Daniel W · Books</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#games">Games</a>
+      <a href="books.html" class="active">Books</a>
+      <a href="#storybook">Storybook</a>
+      <a href="#activity">Activity Books</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-logo reveal">
+        <img src="logo-dw.jpg" alt="Daniel W logo" />
+      </div>
+      <p class="hero-eyebrow reveal">Children's Books · BOB &amp; BEE</p>
+      <h1 class="hero-title reveal">
+        Adventure books that <span class="grad">teach kindness</span><br />
+        and the <span class="grad">wonders of the world</span>.
+      </h1>
+      <p class="hero-sub reveal">
+        Written and illustrated by Daniel Wolniewicz. Join Bob and Bee across 21 amazing
+        worlds — from the Maya Jungle to the Cosmos — in colourful activity books and a
+        read-aloud storybook. Available now on Amazon.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#storybook" class="btn btn-primary">Browse the books</a>
+        <a href="index.html#apps" class="btn btn-ghost">See my apps</a>
+      </div>
+    </div>
+    <a href="#storybook" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- STORYBOOK -->
+  <section id="storybook" class="section">
+    <div class="section-head reveal">
+      <span class="tag">01 — Storybook</span>
+      <h2>BOB &amp; BEE and the Great Treasure Map.</h2>
+    </div>
+    <div class="book-feature reveal">
+      <div class="book-cover">
+        <img src="img/book-storybook-pl.jpg" alt="BOB &amp; BEE and the Great Treasure Map — storybook cover" />
+      </div>
+      <div class="book-info">
+        <h3>The read-aloud adventure</h3>
+        <p class="app-tagline">A chapter storybook for ages 5-8</p>
+        <p class="app-desc">
+          Bob and Bee find an old, enchanted treasure map in the attic. When they touch it
+          together, it wakes and leads them through twenty-one extraordinary lands — from the
+          Maya jungle, through the pyramids of Egypt and the frozen Norse Lands, all the way to
+          the stars. In every land waits a riddle, a guardian and a lost treasure. But Bob and
+          Bee soon discover that the most precious things aren't the golden masks or jewels —
+          they're the friends you meet along the way, and the courage to understand before you
+          judge. A warm, funny, read-aloud story packed with real facts about the world.
+        </p>
+        <div class="book-badges">
+          <span class="book-badge live">● On Amazon</span>
+          <span class="book-badge">Paperback £10.99</span>
+          <span class="book-badge">Hardcover £24.99</span>
+          <span class="book-badge soon">English edition coming soon</span>
+        </div>
+        <div class="app-actions">
+          <span class="app-status">Polish edition available · English edition in preparation</span>
+        </div>
+        <p class="app-note">The first edition is in Polish (BOB &amp; BEE i Wielka Mapa Skarbów). A fully translated English edition is on the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITY BOOKS -->
+  <section id="activity" class="section">
+    <div class="section-head reveal">
+      <span class="tag">02 — Activity &amp; Colouring</span>
+      <h2>BOB &amp; BEE Activity &amp; Colouring Books.</h2>
+    </div>
+
+    <!-- Featured: the full 21-world edition -->
+    <div class="book-feature reveal">
+      <div class="book-cover">
+        <img src="img/book-activity-full.jpg" alt="BOB &amp; BEE Activity &amp; Colouring Book — 21 Amazing Worlds" />
+      </div>
+      <div class="book-info">
+        <h3>The Complete Edition — 21 Amazing Worlds</h3>
+        <p class="app-tagline">Colouring · Mazes · Word Search · Crosswords · Maths Puzzles · Ages 3+</p>
+        <p class="app-desc">
+          The jumbo edition — over 290 pages of fun across all 21 themed worlds, from the Maya
+          Jungle and Ancient Egypt to Atlantis, the Heavens and the Cosmos. Beautiful colouring
+          pages, mazes in different shapes, spot &amp; count puzzles, word searches, easy
+          crosswords, gentle "treasure maths", and a full answer key at the back. Perfect for
+          home, travelling, quiet time or a gift.
+        </p>
+        <div class="book-badges">
+          <span class="book-badge live">● Live on Amazon</span>
+          <span class="book-badge">290+ pages</span>
+          <span class="book-badge">21 worlds</span>
+          <span class="book-badge price">£29.99</span>
+        </div>
+        <div class="app-actions">
+          <a class="btn btn-primary" href="https://amzn.eu/d/041ZSXeB" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- The 3 split books -->
+    <h3 class="books-sub-head reveal">Or pick a 7-world book</h3>
+    <div class="books-grid">
+      <article class="book-card reveal">
+        <div class="book-cover"><img src="img/book-activity-1.jpg" alt="BOB &amp; BEE Activity Book — Chapters 1-7" /></div>
+        <h4>Book 1 · Chapters 1-7</h4>
+        <p class="book-sub">Maya, Egypt, Greece, Norse, Aztec, Chinese &amp; Japan</p>
+        <span class="book-price">£14.99</span>
+        <div class="app-actions" style="justify-content:center;">
+          <a class="btn btn-primary btn-sm" href="https://amzn.eu/d/07mnEYk4" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </article>
+
+      <article class="book-card reveal">
+        <div class="book-cover"><img src="img/book-activity-2.jpg" alt="BOB &amp; BEE Activity Book — Chapters 8-14" /></div>
+        <h4>Book 2 · Chapters 8-14</h4>
+        <p class="book-sub">Hindu, Celtic, Mesopotamia, Slavic, Polynesian, African &amp; Native American</p>
+        <span class="book-price">£14.99</span>
+        <div class="app-actions" style="justify-content:center;">
+          <a class="btn btn-primary btn-sm" href="https://amzn.eu/d/0gJyQTDQ" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </article>
+
+      <article class="book-card reveal">
+        <div class="book-cover"><img src="img/book-activity-3.jpg" alt="BOB &amp; BEE Activity Book — Chapters 15-21" /></div>
+        <h4>Book 3 · Chapters 15-21</h4>
+        <p class="book-sub">Persian, Inca, Arthurian, Atlantis, Underworld, Heavens &amp; Cosmos</p>
+        <span class="book-price">£14.99</span>
+        <div class="app-actions" style="justify-content:center;">
+          <a class="btn btn-primary btn-sm" href="https://amzn.eu/d/0jfUfZvf" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- UNIVERSE -->
+  <section id="universe" class="section">
+    <div class="section-head reveal">
+      <span class="tag">03 — The world of BOB &amp; BEE</span>
+      <h2>One adventure, many ways to play.</h2>
+    </div>
+    <div class="about-text reveal" style="max-width:720px;">
+      <p>
+        BOB &amp; BEE is a growing world for curious kids — the same two explorers, the same
+        21 wonder-filled lands, across books, puzzles and games. Colour and solve in the
+        activity books, read the full story in the storybook, then play the games.
+      </p>
+    </div>
+    <div class="skills-grid" style="margin-top:30px;">
+      <a class="skill glass reveal" href="index.html#games" style="text-decoration:none;color:inherit;">
+        <h4>BOB &amp; BEE: Build &amp; Beyond</h4><p>The main game — build vehicles and explore 21 worlds. In development.</p></a>
+      <a class="skill glass reveal" href="index.html#games" style="text-decoration:none;color:inherit;">
+        <h4>Treasure Catch</h4><p>A fast arcade spin-off — catch the falling treasures.</p></a>
+      <a class="skill glass reveal" href="index.html#games" style="text-decoration:none;color:inherit;">
+        <h4>Treasure Match</h4><p>A relaxing match-3 puzzle spin-off.</p></a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="section-head reveal">
+      <span class="tag">04 — Contact</span>
+      <h2>Let's talk.</h2>
+    </div>
+    <p class="contact-lead reveal">
+      Questions about the books, bulk orders, or a translation? I'd love to hear from you.
+    </p>
+    <div class="contact-actions reveal">
+      <a href="mailto:danielw.appdev@gmail.com" class="btn btn-primary">danielw.appdev@gmail.com</a>
+      <a href="https://www.instagram.com/danielw.appdev/" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+      <a href="index.html" class="btn btn-ghost">Back to apps</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Daniel Wolniewicz. All rights reserved. Built by hand with HTML, CSS &amp; JavaScript.</p>
+    <p style="font-size:0.85em;opacity:0.7;margin-top:6px;">BOB &amp; BEE™ and all books, games, characters, artwork and names are the property of Daniel Wolniewicz. Unauthorised use is prohibited.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

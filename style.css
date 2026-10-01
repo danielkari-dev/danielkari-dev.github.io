@@ -315,3 +315,72 @@ body.no-webgl {
   .phone-frame.landscape { width: 300px; height: 172px; }
   .cursor-glow { display: none; }
 }
+
+/* ===== BOOKS PAGE ===== */
+.books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+/* featured book: cover left, text right */
+.book-feature { display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: center; margin-bottom: 20px; }
+.book-cover { border-radius: 14px; box-shadow: 0 24px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.05);
+  transition: transform .4s cubic-bezier(.2,.8,.25,1), box-shadow .4s;
+  transform-origin: center; will-change: transform; }
+.book-cover img { display: block; width: 100%; height: auto; border-radius: 14px; }
+/* on hover the WHOLE cover grows and lifts, breaking out beyond its frame on the page */
+.book-cover:hover {
+  transform: scale(1.35) translateY(-10px);
+  box-shadow: 0 45px 110px rgba(0,0,0,0.7), 0 0 0 1px rgba(53,196,255,0.3);
+  z-index: 20; position: relative;
+}
+.book-feature .book-info h3 { font-size: 1.7rem; margin-bottom: 6px; }
+.book-badges { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 20px; }
+.book-badge { font-size: .8rem; color: var(--text); background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 6px 14px; border-radius: 100px; }
+.book-badge.live { color: #7CF0B0; border-color: rgba(124,240,176,0.4); background: rgba(124,240,176,0.08); }
+.book-badge.soon { color: var(--muted); }
+.book-price { color: var(--accent2); font-weight: 700; font-size: 1.15rem; }
+/* smaller book cards (the 3 split activity books) */
+.book-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; backdrop-filter: blur(14px); text-align: center; transition: transform .25s, border-color .3s, box-shadow .3s;
+  overflow: visible; }
+.book-card:hover { transform: translateY(-5px); border-color: var(--accent2); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.book-card .book-cover { margin: 0 auto 18px; max-width: 190px; }
+.book-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+.book-card .book-sub { color: var(--muted); font-size: .82rem; margin-bottom: 12px; min-height: 2.4em; }
+.book-card .book-price { font-size: 1rem; display: block; margin-bottom: 14px; }
+.books-sub-head { font-size: 1.3rem; margin: 10px 0 26px; text-align: center; }
+@media (max-width: 760px) {
+  .book-feature { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .book-feature .book-info { text-align: center; }
+  .book-badges, .book-feature .app-actions { justify-content: center; }
+  .book-cover { max-width: 260px; }
+}
+
+/* ===== BOOKS link on the home page ===== */
+/* distinct gold-ish CTA button in the hero so books stand out from apps */
+.btn-books {
+  background: linear-gradient(100deg, #ffb347, #ff8a3d); color: #1a1206;
+  box-shadow: 0 8px 30px rgba(255,150,60,0.35); font-weight: 700;
+}
+.btn-books:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(255,150,60,0.55); }
+
+/* home-page books banner */
+.books-banner {
+  display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center;
+  border-radius: var(--radius); padding: 36px 40px; text-decoration: none; color: inherit;
+  transition: transform .3s, border-color .3s, box-shadow .3s; position: relative;
+}
+.books-banner:hover { transform: translateY(-5px); border-color: var(--accent2);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+.books-banner-covers { position: relative; width: 220px; height: 200px; flex-shrink: 0; }
+.bb-cover { position: absolute; width: 130px; border-radius: 8px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.55); transition: transform .4s cubic-bezier(.2,.8,.25,1); }
+.bb-1 { left: 0;   top: 10px; transform: rotate(-8deg);  z-index: 3; }
+.bb-2 { left: 45px; top: 0;   transform: rotate(2deg);   z-index: 2; }
+.bb-3 { left: 90px; top: 14px; transform: rotate(10deg); z-index: 1; }
+.books-banner:hover .bb-1 { transform: rotate(-12deg) translateY(-6px) scale(1.04); }
+.books-banner:hover .bb-2 { transform: rotate(0deg)   translateY(-10px) scale(1.06); z-index: 4; }
+.books-banner:hover .bb-3 { transform: rotate(14deg)  translateY(-6px) scale(1.04); }
+.books-banner-text h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.books-banner-text p { color: var(--muted); margin-bottom: 20px; max-width: 520px; }
+@media (max-width: 760px) {
+  .books-banner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 30px; }
+  .books-banner-covers { margin: 0 auto; }
+}
