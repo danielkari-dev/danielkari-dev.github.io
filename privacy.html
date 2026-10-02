@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Daniel W AppDev</title>
+  <meta name="description" content="Privacy policy for the apps and games by Daniel W - AppDev, including BOB &amp; BEE: Build &amp; Beyond, QuickGallery and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal{max-width:800px;margin:0 auto;padding:140px 22px 90px;}
+    .legal h1{font-family:'Space Grotesk',sans-serif;font-size:2.1rem;margin:0 0 6px;}
+    .legal .updated{opacity:.6;font-size:.9rem;margin-bottom:36px;}
+    .legal h2{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;margin:36px 0 10px;}
+    .legal p,.legal li{line-height:1.7;opacity:.9;}
+    .legal ul{padding-left:20px;}
+    .legal a{color:var(--accent2,#35C4FF);}
+    .legal .back{display:inline-block;margin-top:42px;}
+  </style>
+</head>
+<body>
+  <canvas id="webgl-bg"></canvas>
+  <div class="bg-grain"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="index.html#hero" class="nav-logo">
+      <img src="logo-dw.jpg" alt="DW" class="nav-logo-img" />
+      <span>Daniel W · AppDev</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#games">Games</a>
+      <a href="books.html">Books</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="legal">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 01/10/2026</p>
+
+    <p>This privacy policy applies to the mobile apps and games published by Daniel W - AppDev
+    ("I", "me", "the developer"), including <strong>BOB &amp; BEE: Build &amp; Beyond</strong>,
+    <strong>QuickGallery</strong>, and other titles under the Daniel W - AppDev developer account
+    on Google Play. Your privacy matters. This policy explains, in plain language, what data my
+    apps do and do not handle.</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>My apps do <strong>not</strong> collect, store, or share your personal data on any server.</li>
+      <li>My apps do <strong>not</strong> require you to create an account or sign in.</li>
+      <li>Game progress and settings are saved <strong>only on your own device</strong>.</li>
+      <li>I do not sell or share any data with third parties.</li>
+    </ul>
+
+    <h2>Information I collect</h2>
+    <p>My apps and games do not collect personal information such as your name, email address,
+    location, or contacts. Any data an app creates (for example your game progress, coins,
+    unlocked items, achievements, statistics, and settings) is stored locally on your device
+    using standard on-device storage and never leaves your device unless you back it up yourself.</p>
+
+    <h2>Permissions</h2>
+    <p>Some apps may ask for a device permission only to provide a feature you have chosen to use
+    (for example, access to your photos in a gallery app). Permissions are used only for that
+    feature, on your device, and are never used to collect or transmit your data to me or anyone else.</p>
+
+    <h2>Children</h2>
+    <p>My games are family-friendly in content, but they are not specifically directed at
+    children under 13. I do not knowingly collect any personal information from children.</p>
+
+    <h2>Advertising and purchases</h2>
+    <p>The current version of BOB &amp; BEE: Build &amp; Beyond contains <strong>no advertising</strong>
+    and <strong>no in-app purchases</strong>. If a future update introduces optional in-app purchases
+    (for example, buying in-game gold coins) or advertising, those features will be provided through
+    Google Play and Google's services. In that case, Google may process limited data (such as a
+    device advertising identifier or purchase information) in line with
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's own privacy policy</a>.
+    This page will be updated before any such feature is released, and the app's Google Play Data
+    Safety section will reflect the change.</p>
+
+    <h2>Data sharing</h2>
+    <p>I do not share, sell, or transfer any user data to third parties.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>I may update this policy from time to time. The "Last updated" date above shows when it last
+    changed. Significant changes will be reflected here and, where required, in the app's Google Play listing.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions about this policy, contact me at
+    <a href="mailto:danielw.appdev@gmail.com">danielw.appdev@gmail.com</a>.</p>
+
+    <a href="index.html" class="btn btn-ghost back">&larr; Back to site</a>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Daniel Wolniewicz. All rights reserved. Built by hand with HTML, CSS &amp; JavaScript.</p>
+    <p style="font-size:0.85em;opacity:0.7;margin-top:6px;">BOB &amp; BEE™ and all books, games, characters, artwork and names are the property of Daniel Wolniewicz. Unauthorised use is prohibited.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
